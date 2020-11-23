@@ -1,4 +1,19 @@
 // Il computer deve generare 16 numeri casuali tra 1 e 100.
+function getRandomNumber(min, max){
+  random =  Math.floor(Math.random() * (max + 1 + min)) + min;
+  return random;
+}
+var numeriPc = [];
+
+while (numeriPc.lenght < 16) {
+  var numberRandom = getRandomNumber(1, 100);
+  if(numeriPc.indexOf(numberRandom) == -1){
+    numeriPc.push(numberRandom);
+  }
+  console.log(numberRandom);
+}
+
+console.log(numeriPc);
 
 // I numeri non possono essere duplicati
 
