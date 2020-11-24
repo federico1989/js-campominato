@@ -21,16 +21,26 @@ var numberUser = [];
 
 // L’utente non può inserire più volte lo stesso numero.
 
-while (numberUser.length < 16) {
+while (numberUser.length < 84) {
   var getNumber = Number(prompt("Inserisci un numero da 1 a 100"));
-  if(getNumber !== 0 && numberUser.indexOf(getNumber) == -1){
+  var numberForbidden = (getNumber < 1 || getNumber > 100);
+  if(numberForbidden){
+    alert("Mi dispiace, non è un numero valido");
+  } else if (numberPc.indexOf(getNumber) != -1){
+    alert("Mi dispiace, hai colpito una bomba totalizzando " + numberUser.length + " punti");
+  } else if (numberUser.indexOf(getNumber) == -1){
     numberUser.push(getNumber);
   }
   console.log(getNumber);
 }
 console.log(numberUser);
 
+
+if (numberUser.length == 84) {
+  alert("Complimenti, hai vinto totalizzando")
+}
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
+
 
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 
