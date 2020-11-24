@@ -3,23 +3,32 @@ function getRandomNumber(min, max){
   random =  Math.floor(Math.random() * (max + 1 + min)) + min;
   return random;
 }
-var numeriPc = [];
+var numberPc = [];
+// I numeri non possono essere duplicati
 
-while (numeriPc.lenght < 16) {
+while (numberPc.length < 16) {
   var numberRandom = getRandomNumber(1, 100);
-  if(numeriPc.indexOf(numberRandom) == -1){
-    numeriPc.push(numberRandom);
+  if(numberPc.indexOf(numberRandom) == -1){
+    numberPc.push(numberRandom);
   }
   console.log(numberRandom);
 }
+console.log(numberPc);
 
-console.log(numeriPc);
-
-// I numeri non possono essere duplicati
 
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
+var numberUser = [];
 
 // L’utente non può inserire più volte lo stesso numero.
+
+while (numberUser.length < 16) {
+  var getNumber = Number(prompt("Inserisci un numero da 1 a 100"));
+  if(getNumber !== 0 && numberUser.indexOf(getNumber) == -1){
+    numberUser.push(getNumber);
+  }
+  console.log(getNumber);
+}
+console.log(numberUser);
 
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
 
