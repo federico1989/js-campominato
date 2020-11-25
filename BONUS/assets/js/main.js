@@ -3,19 +3,19 @@
 // con difficoltà 0 => tra 1 e 100
 // con difficoltà 1 =>  tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
-var question = prompt("Scegli il tipo di difficoltà: Facile, Medio o Difficile");
+var question = prompt("Scegli il tipo di difficoltà: FACILE, MEDIO o DIFFICILE").toUpperCase();
 var x;
 var y;
-switch (x, y) {
-  case "Facile":
+switch (question) {
+  case "FACILE":
    x = 100;
    y = 84
     break;
-  case "Medio":
+  case "MEDIO":
     x = 80;
     y = 68
   break;
-  case "Difficile":
+  case "DIFFICILE":
     x = 50;
     y = 34;
   break;
@@ -51,17 +51,21 @@ while (numberUser.length < y) {
   if(numberForbidden){
     alert("Mi dispiace, non è un numero valido");
   } else if (numberPc.indexOf(getNumber) != -1){
-    alert("Mi dispiace, hai colpito una bomba totalizzando " + numberUser.length + " punti");
+    alert("Mi dispiace, hai colpito una bomba 💣 totalizzando " + numberUser.length + " punti");
+    break;
+  } else if (numberUser.indexOf(getNumber) != -1) {
+    alert("Numero già selezionato. Inserisci un altro numero 🔢");
   } else if (numberUser.indexOf(getNumber) == -1){
     numberUser.push(getNumber);
+    }
+    console.log(getNumber);
   }
-  console.log(getNumber);
-}
+
 console.log(numberUser);
 
 
 if (numberUser.length == y) {
-  alert("Complimenti, hai vinto")
+  alert("Complimenti, hai vinto 🏆")
 }
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
 

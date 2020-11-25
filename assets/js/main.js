@@ -27,7 +27,9 @@ while (numberUser.length < 84) {
   if(numberForbidden){
     alert("Mi dispiace, non è un numero valido");
   } else if (numberPc.indexOf(getNumber) != -1){
-    alert("Mi dispiace, hai colpito una bomba totalizzando " + numberUser.length + " punti");
+    alert("Mi dispiace, hai colpito una bomba 💣 totalizzando " + numberUser.length + " punti");
+  } else if (numberUser.indexOf(getNumber) != -1) {
+    alert("Numero già selezionato. Inserisci un altro numero 🔢");
   } else if (numberUser.indexOf(getNumber) == -1){
     numberUser.push(getNumber);
   }
@@ -37,7 +39,7 @@ console.log(numberUser);
 
 
 if (numberUser.length == 84) {
-  alert("Complimenti, hai vinto totalizzando")
+  alert("Complimenti, hai vinto 🏆")
 }
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
 
