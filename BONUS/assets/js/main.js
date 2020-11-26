@@ -20,6 +20,8 @@ switch (question) {
     y = 34;
   break;
   default:
+    alert("Inserire una difficoltà elencata");
+    break;
 }
 alert("Hai scelto il livello " + question)
 // Il computer deve generare 16 numeri casuali tra 1 e 100.

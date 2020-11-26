@@ -28,6 +28,7 @@ while (numberUser.length < 84) {
     alert("Mi dispiace, non è un numero valido");
   } else if (numberPc.indexOf(getNumber) != -1){
     alert("Mi dispiace, hai colpito una bomba 💣 totalizzando " + numberUser.length + " punti");
+    break;
   } else if (numberUser.indexOf(getNumber) != -1) {
     alert("Numero già selezionato. Inserisci un altro numero 🔢");
   } else if (numberUser.indexOf(getNumber) == -1){
